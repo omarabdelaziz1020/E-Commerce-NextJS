@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-Commerce App
 
-## Getting Started
+A simple e-commerce application built with **Next.js**, **React**, **Redux Toolkit**, and **SCSS**. This app fetches product data from the [DummyJSON API](https://dummyjson.com/docs/products) and allows users to view and manage a shopping cart.
 
-First, run the development server:
+---
+
+## Features
+
+- **Product Listing**: Displays products with image, name, price, and description.
+- **Shopping Cart**: Add and remove products, view total price, and persist cart state.
+- **Responsive Design**: Fully responsive on desktop, tablet, and mobile.
+- **Server-Side Rendering (SSR)**: Uses Next.js to improve performance and SEO.
+
+---
+
+## Installation Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-repository-name.git
+cd your-repository-name
+```
+
+### 2. Install Dependencies
+
+Ensure you have Node.js (LTS) installed, then run:
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+
+Run the following command to start the app:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Build for Production (Optional)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To create an optimized production build:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run the production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Assumptions and Notes
+1. **Data Fetching**:
+   - The app fetches product data from the DummyJSON API (`https://dummyjson.com/products`) using server-side rendering (SSR).
 
-## Deploy on Vercel
+2. **State Management**:
+   - The shopping cart state is managed using **Redux Toolkit** for simplicity and scalability.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Styling**:
+   - SCSS is used for styling. Global styles are defined in `globals.scss`, while component-specific styles use CSS Modules.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Image Optimization**:
+   - Images are optimized using the `next/image` component, with external images allowed via `remotePatterns` in `next.config.js`.
+
+5. **Routing**:
+   - File-based routing in Next.js is used for navigation.
+
+6. **Browser Requirements**:
+   - The app is tested in modern browsers (Chrome, Firefox, Edge).
+
+
+```bash
+src/
+├── components/         # Reusable UI components (Header, ProductCard, etc.)
+├── pages/              # Application pages (Home, Cart)
+├── redux/              # Redux state management files (store, cartSlice)
+├── styles/             # Global and component-specific styles (SCSS)
+```
+
+## Author
+
+- **Omar Abdulaziz**
+- [GitHub Profile](https://github.com/omarabdelaziz1020)
